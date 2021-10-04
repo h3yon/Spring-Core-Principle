@@ -6,7 +6,7 @@ import hello.core.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 
-    // 추상화에만 의지하도록 설계
+    // 추상화에만 의지하도록 설계 -> 정률할인으로 변경 시 전혀 변경 필요 없음. 기능 확장 가능
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
