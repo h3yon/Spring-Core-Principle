@@ -14,10 +14,11 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-    // 수동, 자동 빈 중복 -> Test는 성공하지만 SpringBootApplication 부분 진행하면 에러
-    // 에러 안 나게 하고 싶으면 properties에 spring.main.allow-bean-definition-overriding=true로 해야됨
+    /*
     @Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
+    */
+
 }

@@ -16,6 +16,7 @@ public class OrderServiceTest {
     public void beforeEach() {
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
     }
 
     @Test
@@ -28,15 +29,15 @@ public class OrderServiceTest {
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
-    @Test
-    void fieldInjectionTest(){
-        OrderServiceImpl orderService = new OrderServiceImpl();;
-        orderService.createOrder(1L, "itemA", 10000);
+//    @Test
+//    void fieldInjectionTest(){
+//        OrderServiceImpl orderService = new OrderServiceImpl();;
+//        orderService.createOrder(1L, "itemA", 10000);
 
         // 필드 주입 방식: 수정 불가능 -> 널 포인터 익셉션으로 아래 setter 해야됨
 //        orderService.setMemberRepository(new MemoryMemberRepository());
 //        orderService.setDiscountPolicy(new FixDiscountPolicy());
 //
 //        orderService.createOrder(1L, "itemA", 10000);
-    }
+//    }
 }
