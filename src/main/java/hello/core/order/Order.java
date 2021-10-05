@@ -51,7 +51,7 @@ public class Order {
     }
 
     @Override
-    public String toString() {  //객체 출력하면 toString();
+    public String toString() {
         return "Order{" +
                 "memberId=" + memberId +
                 ", itemName='" + itemName + '\'' +

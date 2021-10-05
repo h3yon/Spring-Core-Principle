@@ -1,8 +1,9 @@
 package hello.core.order;
 
 import hello.core.AppConfig;
-import hello.core.discount.FixDiscountPolicy;
-import hello.core.member.*;
+import hello.core.member.Grade;
+import hello.core.member.Member;
+import hello.core.member.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,15 +30,4 @@ public class OrderServiceTest {
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
-//    @Test
-//    void fieldInjectionTest(){
-//        OrderServiceImpl orderService = new OrderServiceImpl();;
-//        orderService.createOrder(1L, "itemA", 10000);
-
-        // 필드 주입 방식: 수정 불가능 -> 널 포인터 익셉션으로 아래 setter 해야됨
-//        orderService.setMemberRepository(new MemoryMemberRepository());
-//        orderService.setDiscountPolicy(new FixDiscountPolicy());
-//
-//        orderService.createOrder(1L, "itemA", 10000);
-//    }
 }

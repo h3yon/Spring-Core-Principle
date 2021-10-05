@@ -2,7 +2,7 @@ package hello.core.scan.filter;
 
 import java.lang.annotation.*;
 
-@Target(ElementType.TYPE) // class
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface MyExcludeComponent {
