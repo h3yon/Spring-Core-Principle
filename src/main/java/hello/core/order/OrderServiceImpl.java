@@ -3,7 +3,9 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
     // 추상화에만 의지하도록 설계 -> 정률할인으로 변경 시 전혀 변경 필요 없음. 기능 확장 가능
