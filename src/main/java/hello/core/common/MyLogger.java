@@ -6,10 +6,11 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value="request")
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS) //프록시로 가짜로 만듦. 클래스 또는 인터페이스 선택 가능
 public class MyLogger {
     private String uuid;
     private String requestURL;
